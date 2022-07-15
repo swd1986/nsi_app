@@ -8,10 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import bi.group.nsi_app.R
 import bi.group.nsi_app.model.Affirmation
+import bi.group.nsi_app.ui.home.HomeFragment
 
 class ItemAdapter(private val context: Context, private val dataset: List<Affirmation>) {
     class ItemAdapter(
-        private val context: Context,
+        private val context: HomeFragment,
         private val dataset: List<Affirmation>
     ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 

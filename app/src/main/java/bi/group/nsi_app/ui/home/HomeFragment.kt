@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
+import bi.group.nsi_app.adapter.ItemAdapter
+import bi.group.nsi_app.data.Datasource
 import bi.group.nsi_app.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -28,10 +30,12 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textHome
-//        homeViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
+        // Initialize data.
+        val myDataset = Datasource().loadAffirmations()
+        val recyclerView: RecyclerView = binding.recyclerView;
+        recyclerView.adapter = ItemAdapter.ItemAdapter(this, myDataset)
+        recyclerView.setHasFixedSize(true)
+
         return root
     }
 
@@ -39,4 +43,5 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }
