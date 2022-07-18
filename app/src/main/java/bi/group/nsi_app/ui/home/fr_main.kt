@@ -11,7 +11,7 @@ import bi.group.nsi_app.adapter.ItemAdapter
 import bi.group.nsi_app.data.Datasource
 import bi.group.nsi_app.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment() {
+class fr_main : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
@@ -25,7 +25,7 @@ class HomeFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View {
         val homeViewModel =
-                ViewModelProvider(this).get(HomeViewModel::class.java)
+                ViewModelProvider(this).get(main_model::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root

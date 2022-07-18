@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="bi.group.nsi_app.ui.home.HomeFragment"
+        android:name="bi.group.nsi_app.ui.home.fr_main"
         android:label="@string/menu_orders"
         tools:layout="@layout/fragment_home" />
 

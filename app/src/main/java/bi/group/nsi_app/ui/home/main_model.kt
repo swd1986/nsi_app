@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class main_model : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "Это тестовый фрагмент для изучения"
