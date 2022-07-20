@@ -1,6 +1,7 @@
 package bi.group.nsi_app.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,13 +11,12 @@ import androidx.recyclerview.widget.RecyclerView
 import bi.group.nsi_app.adapter.ItemAdapter
 import bi.group.nsi_app.data.Datasource
 import bi.group.nsi_app.databinding.FragmentHomeBinding
+import com.example.android.marsphotos.network.MarsApi
 
 class fr_main : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
