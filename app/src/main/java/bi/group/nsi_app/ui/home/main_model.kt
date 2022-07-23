@@ -11,16 +11,24 @@ class main_model : ViewModel() {
     fun getAllUsers(): MutableLiveData<List<User>> {
         val users = MutableLiveData<List<User>>()
 
-        val user = User(
+        val user1 = User(
             fName = "fName",
             lName = "lName",
             id = 0,
             score = 1
         )
 
+        val user2 = User(
+            fName = "fName2",
+            lName = "lName2",
+            id = 1,
+            score = 2
+        )
+
         val u = ArrayList<User>();
 
-        u.add(user)
+        u.add(user1)
+        u.add(user2)
 
         viewModelScope.launch {
             users.postValue(u)
