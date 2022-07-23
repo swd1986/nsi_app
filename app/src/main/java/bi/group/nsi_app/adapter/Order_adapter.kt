@@ -9,11 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import bi.group.nsi_app.R
 import bi.group.nsi_app.ui.home.fr_main
 import bi.group.nsi_app.model.Order
+import bi.group.nsi_app.model.User
 
-class ItemAdapter(private val context: Context, private val dataset: List<Order>) {
+class Order_adapter(private val context: List<User>, private val dataset: List<User>) {
     class ItemAdapter(
         private val context: fr_main,
-        private val dataset: List<Order>
+        private val dataset: List<User>
     ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
         class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
