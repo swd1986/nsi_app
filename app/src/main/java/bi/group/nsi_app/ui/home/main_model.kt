@@ -10,8 +10,20 @@ class main_model : ViewModel() {
 
     fun getAllUsers(): MutableLiveData<List<User>> {
         val users = MutableLiveData<List<User>>()
+
+        val user = User(
+            fName = "fName",
+            lName = "lName",
+            id = 0,
+            score = 1
+        )
+
+        val u = ArrayList<User>();
+
+        u.add(user)
+
         viewModelScope.launch {
-            //users.postValue(repo.getAllUsers())
+            users.postValue(u)
         }
         return users
     }
