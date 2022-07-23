@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import bi.group.nsi_app.R
-import bi.group.nsi_app.model.Affirmation
 import bi.group.nsi_app.ui.home.fr_main
+import bi.group.nsi_app.model.Order
 
-class ItemAdapter(private val context: Context, private val dataset: List<Affirmation>) {
+class ItemAdapter(private val context: Context, private val dataset: List<Order>) {
     class ItemAdapter(
         private val context: fr_main,
-        private val dataset: List<Affirmation>
+        private val dataset: List<Order>
     ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
         class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
@@ -30,7 +30,7 @@ class ItemAdapter(private val context: Context, private val dataset: List<Affirm
 
         override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
             val item = dataset[position]
-            holder.textView.text =  context.resources.getString(item.stringResourceId)
+            holder.textView.text =  "test"
         }
 
         override fun getItemCount() = dataset.size

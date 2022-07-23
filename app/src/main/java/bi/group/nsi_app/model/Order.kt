@@ -1,4 +1,4 @@
-package com.example.android.marsphotos.network
+package bi.group.nsi_app.model
 
 import com.squareup.moshi.Json
 
