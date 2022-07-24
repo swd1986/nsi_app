@@ -8,18 +8,19 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import bi.group.nsi_app.R
+import bi.group.nsi_app.model.Order
 import bi.group.nsi_app.model.User
 
-class UserRecycleViewAdapter(private val userList: List<User>) : RecyclerView.Adapter<UserAdapter>() {
+class UserRecycleViewAdapter(private val userList: List<Order>) : RecyclerView.Adapter<UserAdapter>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserAdapter {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.recycle_view_item, parent,false)
         return UserAdapter(view)
     }
     override fun onBindViewHolder(holder: UserAdapter, position: Int) {
         val user = userList[position]
-        holder.idTextView.text = user.id.toString()
-        holder.nameTextView.text = "${user.fName} ${user.lName}"
-        holder.scoreTextView.text = user.score.toString()
+        holder.idTextView.text = user.creation_date.toString()
+        holder.nameTextView.text = user.order_id.toString()
+        holder.scoreTextView.text = user.order_id.toString()
     }
     override fun getItemCount(): Int {
         return userList.size
