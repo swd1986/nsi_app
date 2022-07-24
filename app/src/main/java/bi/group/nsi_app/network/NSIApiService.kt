@@ -8,7 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
 private const val BASE_URL =
-    "http://10.0.2.2:3001/"
+    "https://test-apigw.bi.group/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
