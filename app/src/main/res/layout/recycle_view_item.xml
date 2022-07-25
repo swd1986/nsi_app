@@ -87,7 +87,7 @@
         android:id="@+id/cap_order_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Номер заявки: "
+        android:text="@string/res_order_id"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -95,7 +95,7 @@
         android:id="@+id/cap_creation_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Дата создания"
+        android:text="Дата создания: "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_order_id" />
 
@@ -103,7 +103,7 @@
         android:id="@+id/cap_user_1c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Инициатор:"
+        android:text="Инициатор: "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cap_creation_date" />
 
@@ -111,7 +111,7 @@
         android:id="@+id/cap_db_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="База отправитель:"
+        android:text="База отправитель: "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cap_user_1c" />
 
@@ -119,7 +119,7 @@
         android:id="@+id/cap_order_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Наименование:"
+        android:text="Наименование: "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cap_db_name" />
 
@@ -127,7 +127,7 @@
         android:id="@+id/cap_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Тип объекта:"
+        android:text="Тип объекта: "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cap_order_name" />
 
@@ -135,7 +135,7 @@
         android:id="@+id/cap_status_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Статус заявки:"
+        android:text="Статус заявки: "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cap_type" />
 
@@ -143,7 +143,7 @@
         android:id="@+id/cap_responce_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Master:"
+        android:text="Master: "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cap_status_value" />
 
