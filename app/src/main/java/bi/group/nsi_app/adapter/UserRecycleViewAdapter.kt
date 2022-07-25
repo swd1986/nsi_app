@@ -23,6 +23,8 @@ class UserRecycleViewAdapter(private val userList: List<Order>) : RecyclerView.A
         holder.db_name_view.text = user.db_name
         holder.order_name_view.text = user.order_name
         holder.type_view.text = user.type
+        holder.status_value_view.text = user.status_value
+        holder.responce_value_view.text = user.responce_value
     }
     override fun getItemCount(): Int {
         return userList.size
@@ -36,6 +38,8 @@ class UserAdapter(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnCl
     val db_name_view: TextView = itemView.findViewById(R.id.tv_db_name)
     val order_name_view: TextView = itemView.findViewById(R.id.tv_order_name)
     val type_view: TextView = itemView.findViewById(R.id.tv_type)
+    val status_value_view: TextView = itemView.findViewById(R.id.tv_status_value)
+    val responce_value_view: TextView = itemView.findViewById(R.id.tv_responce_value)
     init {
         itemView.setOnClickListener(this)
     }
