@@ -20,7 +20,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface MarsApiService {
-    @GET("nsi/api/get_orders?current=0&pages_cnt=15&creation_date_asc=0&date_begin&date_end&type_id=-1&status_asc=0&search&user_id=0")
+    @GET("nsi/api/get_orders?current=0&pages_cnt=15&creation_date_asc=1&date_begin=2022-07-11T11:46&date_end=&type_id=0&status_asc=0&search=&user_id=1&status_type=all&user_1c=")
     suspend fun getPhotos() : List<Order>
 }
 

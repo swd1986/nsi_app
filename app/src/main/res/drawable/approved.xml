@@ -4,7 +4,9 @@
     <gradient
         android:startColor="@color/white"
         android:endColor="@color/green"
-        android:angle="90"/>
+        android:angle="90" />
+
+    <stroke android:color="@color/black" android:width="1dp"/>
 
     <corners
         android:bottomRightRadius="7dp"

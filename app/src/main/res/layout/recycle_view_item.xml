@@ -5,13 +5,14 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/customshape"
-    android:paddingStart="10px"
-    android:paddingLeft="10px"
-    android:paddingTop="10px"
-    android:paddingEnd="10px"
-    android:paddingRight="10px"
-    android:paddingBottom="10px">
+    android:background="@drawable/approved"
+    android:paddingStart="5dp"
+    android:paddingBottom="5dp"
+    android:paddingEnd="5dp"
+    android:paddingLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    >
 
     <TextView
         android:id="@+id/tv_order_id"
