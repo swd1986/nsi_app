@@ -40,6 +40,15 @@
         tools:text="Инициатор" />
 
     <TextView
+        android:id="@+id/tv_db_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="База отправитель"
+        app:layout_constraintStart_toEndOf="@+id/cap_db_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_1c"
+        tools:text="База отправитель" />
+
+    <TextView
         android:id="@+id/tv_order_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

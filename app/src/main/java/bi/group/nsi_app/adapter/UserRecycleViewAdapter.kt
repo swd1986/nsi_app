@@ -17,9 +17,12 @@ class UserRecycleViewAdapter(private val userList: List<Order>) : RecyclerView.A
     }
     override fun onBindViewHolder(holder: UserAdapter, position: Int) {
         val user = userList[position]
-        holder.creation_date_view.text = user.creation_date.toString()
-        holder.order_id_view.text = user.order_id.toString()
-        holder.user_1c_view.text = user.user_1c.toString()
+        holder.creation_date_view.text = user.creation_date
+        holder.order_id_view.text = user.order_id
+        holder.user_1c_view.text = user.user_1c
+        holder.db_name_view.text = user.db_name
+        holder.order_name_view.text = user.order_name
+        holder.type_view.text = user.type
     }
     override fun getItemCount(): Int {
         return userList.size
@@ -30,6 +33,9 @@ class UserAdapter(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnCl
     val order_id_view: TextView = itemView.findViewById(R.id.tv_order_id)
     val creation_date_view: TextView = itemView.findViewById(R.id.tv_creation_date)
     val user_1c_view: TextView = itemView.findViewById(R.id.tv_user_1c)
+    val db_name_view: TextView = itemView.findViewById(R.id.tv_db_name)
+    val order_name_view: TextView = itemView.findViewById(R.id.tv_order_name)
+    val type_view: TextView = itemView.findViewById(R.id.tv_type)
     init {
         itemView.setOnClickListener(this)
     }
