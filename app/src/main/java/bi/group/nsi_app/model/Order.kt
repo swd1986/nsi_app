@@ -10,6 +10,7 @@ data class Order(
     val order_name: String,
     val type: String,
     val status_value: String,
+    val status_type: String,
     val responce_value: String
     //@Json(name = "img_src") val imgSrcUrl: String
 )

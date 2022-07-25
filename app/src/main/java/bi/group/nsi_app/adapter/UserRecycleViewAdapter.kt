@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import bi.group.nsi_app.R
 import bi.group.nsi_app.model.Order
@@ -17,6 +18,23 @@ class UserRecycleViewAdapter(private val userList: List<Order>) : RecyclerView.A
     }
     override fun onBindViewHolder(holder: UserAdapter, position: Int) {
         val user = userList[position]
+
+        if (user.status_type == "approving"){
+            holder.order_layout.setBackgroundResource(R.drawable.approving)
+        }
+
+        if (user.status_type == "approved"){
+            holder.order_layout.setBackgroundResource(R.drawable.approved)
+        }
+
+        if (user.status_type == "auto_approved"){
+            holder.order_layout.setBackgroundResource(R.drawable.approved)
+        }
+
+        if (user.status_type == "rejected"){
+            holder.order_layout.setBackgroundResource(R.drawable.rejected)
+        }
+
         holder.creation_date_view.text = user.creation_date
         holder.order_id_view.text = user.order_id
         holder.user_1c_view.text = user.user_1c
@@ -40,6 +58,7 @@ class UserAdapter(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnCl
     val type_view: TextView = itemView.findViewById(R.id.tv_type)
     val status_value_view: TextView = itemView.findViewById(R.id.tv_status_value)
     val responce_value_view: TextView = itemView.findViewById(R.id.tv_responce_value)
+    val order_layout: ConstraintLayout =  itemView.findViewById(R.id.order_layout)
     init {
         itemView.setOnClickListener(this)
     }

@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/WORK/android/nsi_app/app/src/main/res/drawable/approved.xml" value="0.2135" />
+        <entry key="..\:/WORK/android/nsi_app/app/src/main/res/drawable/approving.xml" value="0.2135" />
         <entry key="..\:/WORK/android/nsi_app/app/src/main/res/drawable/customshape.xml" value="0.1795" />
+        <entry key="..\:/WORK/android/nsi_app/app/src/main/res/drawable/default.xml" value="0.2135" />
+        <entry key="..\:/WORK/android/nsi_app/app/src/main/res/drawable/rejected.xml" value="0.2135" />
         <entry key="..\:/WORK/android/nsi_app/app/src/main/res/layout/activity_main.xml" value="0.1778115501519757" />
         <entry key="..\:/WORK/android/nsi_app/app/src/main/res/layout/app_bar_main.xml" value="0.1778115501519757" />
         <entry key="..\:/WORK/android/nsi_app/app/src/main/res/layout/content_main.xml" value="0.1778115501519757" />
