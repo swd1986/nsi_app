@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import bi.group.nsi_app.R
 import bi.group.nsi_app.model.Order
-import bi.group.nsi_app.model.User
 
 class UserRecycleViewAdapter(private val userList: List<Order>) : RecyclerView.Adapter<UserAdapter>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserAdapter {
@@ -18,9 +17,9 @@ class UserRecycleViewAdapter(private val userList: List<Order>) : RecyclerView.A
     }
     override fun onBindViewHolder(holder: UserAdapter, position: Int) {
         val user = userList[position]
-        holder.idTextView.text = user.creation_date.toString()
-        holder.nameTextView.text = user.order_id.toString()
-        holder.scoreTextView.text = user.order_id.toString()
+        holder.creation_date_view.text = user.creation_date.toString()
+        holder.order_id_view.text = user.order_id.toString()
+        holder.user_1c_view.text = user.user_1c.toString()
     }
     override fun getItemCount(): Int {
         return userList.size
@@ -28,15 +27,15 @@ class UserRecycleViewAdapter(private val userList: List<Order>) : RecyclerView.A
 }
 
 class UserAdapter(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener{
-    val idTextView: TextView = itemView.findViewById(R.id.tvId)
-    val nameTextView: TextView = itemView.findViewById(R.id.tvName)
-    val scoreTextView: TextView = itemView.findViewById(R.id.tvScore)
+    val order_id_view: TextView = itemView.findViewById(R.id.tv_order_id)
+    val creation_date_view: TextView = itemView.findViewById(R.id.tv_creation_date)
+    val user_1c_view: TextView = itemView.findViewById(R.id.tv_user_1c)
     init {
         itemView.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         Log.e("swd", "test");
-        Toast.makeText(itemView.context, "${idTextView.text} clicked", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(itemView.context, "${idTextView.text} clicked", Toast.LENGTH_SHORT).show()
     }
 }
 

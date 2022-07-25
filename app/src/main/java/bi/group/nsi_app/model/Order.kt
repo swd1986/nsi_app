@@ -4,6 +4,7 @@ import com.squareup.moshi.Json
 
 data class Order(
     val order_id: String,
-    val creation_date: String
+    val creation_date: String,
+    val user_1c: String
     //@Json(name = "img_src") val imgSrcUrl: String
 )
